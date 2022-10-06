@@ -119,12 +119,12 @@ div.menu ul li a:hover {
 
 /* ------------- CLASES JS ------------- */
 
-div.container div.menu.mostrar {
+.mostrar {
   transform: translateX(0%);
   transition: transform 0.5s ease;
 }
 
-body.empujar {
+.empujar {
   transform: translateX(150px);
   transition: transform 0.5s ease;
 }
