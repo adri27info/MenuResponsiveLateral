@@ -10,7 +10,10 @@ function borrarClaseMenu(e) {
     if (menu.getAttribute("class").includes("mostrar")) {
       menu.classList.remove("mostrar");
     }
-    if (body.getAttribute("class").includes("empujar")) {
+    if (
+      body.getAttribute("class") !== null &&
+      body.getAttribute("class").includes("empujar")
+    ) {
       body.classList.remove("empujar");
     }
   }
