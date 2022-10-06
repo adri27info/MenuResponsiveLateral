@@ -9,6 +9,8 @@
 
 body {
   background-color: lightblue;
+  transform: translateX(0%);
+  transition: transform 0.5s ease;
 }
 
 /* ------------- CONTAINER ------------- */
@@ -31,8 +33,6 @@ div.container div.contenedorNav {
   justify-content: flex-start;
   align-items: center;
   padding: 10px;
-  transform: translateX(0%);
-  transition: transform 0.5s ease;
   background-color: silver;
 }
 
@@ -60,12 +60,29 @@ div.contenedorNav nav ul li a {
 }
 
 div.contenedorNav nav ul li a:hover {
-  color: silver;
+  color: white;
+}
+
+/* ------------- DATOS ------------- */
+
+div.container div.datos {
+  background-color: white;
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+}
+
+div.datos h2 {
+  margin-bottom: 10px;
+}
+
+div.datos p {
+  text-align: justify;
 }
 
 /* ------------- MENU ------------- */
 
-div.container div.menu {
+div.menu {
   background-color: lightblue;
   padding: 10px;
   width: 150px;
@@ -97,24 +114,7 @@ div.menu ul li a {
 }
 
 div.menu ul li a:hover {
-  color: silver;
-}
-
-div.container div.datos {
-  background-color: white;
-  margin-top: 20px;
-  padding: 10px;
-  width: 100%;
-  transform: translateX(0%);
-  transition: transform 0.5s ease;
-}
-
-div.datos h2 {
-  margin-bottom: 10px;
-}
-
-div.datos p {
-  text-align: justify;
+  color: white;
 }
 
 /* ------------- CLASES JS ------------- */
@@ -124,8 +124,7 @@ div.container div.menu.mostrar {
   transition: transform 0.5s ease;
 }
 
-div.container div.contenedorNav.empujar,
-div.container div.datos.empujar {
+body.empujar {
   transform: translateX(150px);
   transition: transform 0.5s ease;
 }
