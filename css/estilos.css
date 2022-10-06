@@ -1,0 +1,143 @@
+/* ------------- GENERALES ------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: lightblue;
+}
+
+/* ------------- CONTAINER ------------- */
+
+div.container {
+  background-color: white;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+
+/* ------------- CONTENEDORNAV ------------- */
+
+div.container div.contenedorNav {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  transform: translateX(0%);
+  transition: transform 0.5s ease;
+  background-color: silver;
+}
+
+div.contenedorNav span.material-symbols-outlined {
+  font-weight: bolder;
+  display: none;
+}
+
+div.contenedorNav nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+}
+
+div.contenedorNav nav ul li {
+  display: block;
+  margin: 10px;
+  padding: 10px;
+  font-size: 17px;
+}
+
+div.contenedorNav nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+div.contenedorNav nav ul li a:hover {
+  color: silver;
+}
+
+/* ------------- MENU ------------- */
+
+div.container div.menu {
+  background-color: lightblue;
+  padding: 10px;
+  width: 150px;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+
+div.menu ul {
+  list-style: none;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+div.menu ul li {
+  display: block;
+  padding: 10px;
+  font-size: 17px;
+}
+
+div.menu ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+div.menu ul li a:hover {
+  color: silver;
+}
+
+div.container div.datos {
+  background-color: white;
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  transform: translateX(0%);
+  transition: transform 0.5s ease;
+}
+
+div.datos h2 {
+  margin-bottom: 10px;
+}
+
+div.datos p {
+  text-align: justify;
+}
+
+/* ------------- CLASES JS ------------- */
+
+div.container div.menu.mostrar {
+  transform: translateX(0%);
+  transition: transform 0.5s ease;
+}
+
+div.container div.contenedorNav.empujar,
+div.container div.datos.empujar {
+  transform: translateX(150px);
+  transition: transform 0.5s ease;
+}
+
+/* ------------- MEDIA QUERIES ------------- */
+
+@media only screen and (max-width: 600px) {
+  div.contenedorNav nav {
+    display: none;
+  }
+
+  div.contenedorNav span.material-symbols-outlined {
+    display: block;
+  }
+}
